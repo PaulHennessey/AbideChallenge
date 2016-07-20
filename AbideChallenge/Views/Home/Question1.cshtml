@@ -1,0 +1,26 @@
+﻿@model  AbideChallenge.Models.Question1ViewModel
+
+<div>
+
+    @using (Html.BeginForm("Question1Answer", "Home", FormMethod.Post))
+    {
+
+        <h3>Question 1</h3>
+
+        <p>How many practices are in London?</p>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <button class="btn btn-success">Go</button>
+            </div>
+        </div>
+
+        <div class="form-group row">           
+            <div class="col-md-12">
+                @Html.DisplayFor(m => Model.PracticeCount)
+            </div>
+        </div>
+    }
+
+
+</div>

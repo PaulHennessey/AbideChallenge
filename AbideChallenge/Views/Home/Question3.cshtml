@@ -1,0 +1,39 @@
+﻿@model  AbideChallenge.Models.Question3ViewModel
+
+
+<div>
+
+    @using (Html.BeginForm("Question3Answer", "Home", FormMethod.Post))
+    {
+        <h3>Question 3</h3>
+
+        <p>Which 5 post codes have the highest actual spend, and how much did each spend in total?</p>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <button class="btn btn-success">Go</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Post Code</th>
+                        <th>Total Spend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var row in Model.Rows)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(m => row.PostCode)</td>
+                            <td>@Html.DisplayFor(m => row.Spend)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    }
+</div>

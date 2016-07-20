@@ -1,0 +1,25 @@
+﻿@model  AbideChallenge.Models.Question2ViewModel
+
+<div>
+
+    @using (Html.BeginForm("Question2Answer", "Home", FormMethod.Post))
+    {
+        <h3>Question 2</h3>
+
+        <p>What was the average actual cost of all peppermint oil prescriptions?</p>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <button class="btn btn-success">Go</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                @Html.DisplayFor(m => Model.AverageCost)
+            </div>
+        </div>
+    }
+
+
+</div>
